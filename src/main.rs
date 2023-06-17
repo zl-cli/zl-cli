@@ -1,5 +1,5 @@
 mod config;
-mod ZError;
+mod zerror;
 
 fn main() {
     println!("Hello, world!");
