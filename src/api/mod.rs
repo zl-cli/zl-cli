@@ -2,8 +2,8 @@ use serde_json::json;
 use z_api::ZApi;
 use crate::config::ZConfig;
 
-struct ZApiImpl{
-    config: ZConfig
+pub struct ZApiImpl{
+    pub(crate) config: ZConfig
 }
 
 impl ZApi for ZApiImpl{
@@ -15,7 +15,7 @@ impl ZApi for ZApiImpl{
         let url = format!("https://{host}{path}");
 
         todo!("switch to async");
-        let result = reqwest::get(url).await;
+        let result = reqwest::get(url);
         json!({})
     }
 
